@@ -1,4 +1,9 @@
-import { emailValidation, nameValidation, passwordValidation } from "../utils/validationConstatnt";
+import {
+  dateValidation,
+  emailValidation,
+  nameValidation,
+  passwordValidation,
+} from "../utils/validationConstatnt";
 
 export const formAttributes = [
   {
@@ -16,10 +21,16 @@ export const formAttributes = [
     name: "password",
     placeholder: "Enter Password",
   },
+  {
+    type: "date",
+    id: "birthday",
+    name: "birthday",
+  },
 ];
 
 export const formValidation = {
-    name:nameValidation,
-    email:emailValidation,
-    password:passwordValidation
-}
+  name: nameValidation,
+  email: emailValidation,
+  password: passwordValidation,
+  birthday: dateValidation,
+};
